@@ -1,0 +1,13 @@
+$laptop-max: 1919px;
+$desktop-min: 1920px;
+
+@mixin laptop {
+  @media (max-width: $laptop-max) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: $desktop-min) {
+    @content;
+  }
+}
