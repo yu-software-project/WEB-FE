@@ -1,0 +1,17 @@
+@import "/src/styles/fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  font-family: "inter-regular";
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #f7f7f7;
+}
