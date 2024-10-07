@@ -1,0 +1,45 @@
+@import "/src/styles/media/mixin";
+
+// desktop (1920px ~
+.register-status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0 auto;
+  margin-top: 10px;
+
+  .proceed-container {
+    display: flex; // ?
+    justify-content: space-between; // ?
+    width: 600px;
+
+    .proceed-state,
+    .proceed-state-divider {
+      font-size: 20px;
+      color: #898c9a;
+    }
+
+    .proceed-state_selected {
+      color: #001eff;
+      border-bottom: 1px solid #001eff;
+      font-weight: 900;
+    }
+  }
+}
+
+// laptop ( ~ 1919px)
+@include laptop {
+  .register-status-container {
+    margin-top: 10px;
+
+    .proceed-container {
+      width: 520px;
+
+      .proceed-state,
+      .proceed-state-divider {
+        font-size: 17px;
+      }
+    }
+  }
+}

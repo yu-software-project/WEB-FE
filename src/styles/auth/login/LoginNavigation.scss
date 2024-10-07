@@ -1,0 +1,26 @@
+@import "/src/styles/media/mixin";
+
+.login-navigation-container {
+  position: relative;
+  top: 555px;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+
+  .register-navigation,
+  .account-navigation {
+    font-size: 25px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
+
+@include laptop {
+  .login-navigation-container {
+    top: 450px;
+    .register-navigation,
+    .account-navigation {
+      font-size: 22px;
+    }
+  }
+}

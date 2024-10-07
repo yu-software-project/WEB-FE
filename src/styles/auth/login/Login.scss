@@ -1,0 +1,13 @@
+@import "/src/styles/media/mixin";
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100.5px;
+}
+@include laptop {
+  .login-container {
+    padding-top: 80.5px;
+  }
+}

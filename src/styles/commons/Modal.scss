@@ -1,0 +1,33 @@
+.modal-overlay {
+  // 모달 배경
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 101;
+  background-color: #000000;
+  opacity: 0.3;
+}
+
+.modal {
+  // 모달 창
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 999; // 더 앞으로
+  animation: slide-down 0.6s ease-out forwards;
+}
+
+@keyframes slide-down {
+  // 점점 밝아지게
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

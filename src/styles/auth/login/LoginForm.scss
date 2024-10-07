@@ -1,0 +1,86 @@
+@import "/src/styles/media/mixin";
+
+//desktop (1920px~ )
+.login-form-container {
+  position: fixed;
+  top: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%;
+
+  .login-email-form, // 각 input form
+  .login-password-form {
+    position: relative;
+    width: 100%;
+    height: 77px;
+    margin-top: 28px;
+
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: #d2dae597;
+
+    color: #000000;
+    background-color: #ffffff;
+    font-size: 25px;
+    text-indent: 20px;
+  }
+  .login-email-form:focus, // focus 색 변경
+  .login-password-form:focus {
+    border-color: #ffb800;
+    outline: none;
+  }
+  input::placeholder {
+    // placeholder 색
+    color: #94a3b9;
+  }
+
+  .save-login-info-container {
+    // 로그인 정보 저장 container
+    margin-top: 20px;
+    display: inline-block;
+    .save-login-info-btn {
+      // 버튼
+      width: 22px;
+      height: 22px;
+
+      border-style: solid;
+      border-radius: 50%;
+      border-width: 2px;
+      border-color: #898c9a;
+
+      background-color: rgb(255, 255, 255);
+      position: relative;
+    }
+    .save-login-info-btn.active {
+      // 버튼 클릭
+      background-color: #2fcaae;
+    }
+    .save-login-info {
+      margin-left: 10px;
+      font-size: 25px;
+      color: #94a3b9;
+    }
+  }
+
+  .login-btn {
+    // 로그인 버튼
+    position: relative;
+    width: 100%;
+    height: 77px;
+    margin-top: 83px;
+    border-radius: 10px;
+    background: #ffb800;
+    color: #ffffff;
+    border-style: none;
+    font-size: 30px;
+    font-weight: 500;
+  }
+}
+
+// laptop ( ~ 1919px)
+@include laptop {
+  .login-form-container {
+    top: 250px;
+  }
+}

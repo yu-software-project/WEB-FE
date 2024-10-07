@@ -1,0 +1,47 @@
+@import "/src/styles/media/mixin";
+
+.register-header-container {
+  top: 0;
+  width: 100%;
+  //height: 400px;
+
+  .register-logo-container {
+    border-bottom: 2px solid #d2d7e0;
+
+    .logo-iamge {
+      position: relative;
+      width: 7%;
+      left: 150px;
+    }
+  }
+
+  .register-title-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 65px;
+    margin-top: 15px;
+    font-size: 40px;
+    text-indent: 25px;
+    font-weight: 900;
+    border-bottom: 0.1px solid #d2d7e0;
+  }
+}
+
+@include laptop {
+  .register-header-container {
+    .register-title-container {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      height: 55px;
+      margin-top: 12px;
+      font-size: 32px;
+      text-indent: 15px;
+      //font-weight: 700;
+      border-bottom: 0.1px solid #d2d7e0;
+    }
+  }
+}

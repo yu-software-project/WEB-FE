@@ -1,0 +1,162 @@
+@import "/src/styles/media/mixin";
+
+.center-info-container {
+  position: relative;
+  padding-right: 5px;
+  margin-top: 20px;
+  width: 530px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  span {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  input {
+    margin-top: 5px;
+
+    width: 100%;
+    display: block;
+    height: 60px;
+    background-color: #ffffff;
+
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: #e6e9ee;
+    border-radius: 6px;
+
+    padding-inline-start: 15px;
+    font-size: 18px;
+
+    &::placeholder {
+      color: #898c9a;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      border-color: #4162ff;
+    }
+  }
+
+  .important-sign {
+    color: #ed6653;
+  }
+  .file-type-sign {
+    color: #94a3b9;
+    font-size: 15.8px;
+  }
+  button:disabled {
+    background-color: #dde1e6;
+  }
+
+  .center-road-address-search-btn, //주소 검색, 파일 선택
+  .business-certificate-label {
+    width: 235px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 320%; // 임시
+    color: #ed6653;
+    background-color: #f5d5d1;
+
+    border: 1.5px;
+    border-style: solid;
+    border-color: #f5d5d1;
+    border-radius: 6px;
+  }
+
+  .center-road-address-container,
+  .business-certificate-select-container {
+    display: flex;
+  }
+
+  .ceo-name-container,
+  .center-name-container,
+  .center-phone-container,
+  .center-address-container,
+  .business-certificate-container {
+    margin-top: 15px;
+  }
+
+  .business-certificate-container {
+    .business-certificate-select-container {
+      .business-certificate-search-btn {
+        display: none;
+      }
+    }
+  }
+
+  .enter-info-submit-btn {
+    width: 100%;
+    height: 65px;
+    margin-top: 25px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #16269e;
+    border-style: none;
+    border-radius: 6px;
+  }
+}
+
+// laptop ( ~ 1919px)
+@include laptop {
+  .center-info-container {
+    width: 450px;
+    margin-top: 20px;
+    span {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    input {
+      margin-top: 3px;
+
+      width: 100%;
+      display: block;
+      height: 55px;
+      background-color: #ffffff;
+
+      border-width: 2.5px;
+      border-style: solid;
+      border-color: #e6e9ee;
+
+      padding-inline-start: 15px;
+      font-size: 16px;
+    }
+
+    .file-type-sign {
+      font-size: 13px;
+    }
+
+    .center-road-address-search-btn, //주소 검색, 파일 선택
+    .business-certificate-label {
+      width: 205px;
+      margin-top: 5px;
+      margin-left: 15px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .ceo-name-container,
+    .center-name-container,
+    .center-phone-container,
+    .center-address-container,
+    .business-certificate-container {
+      margin-top: 8px;
+    }
+
+    .enter-info-submit-btn {
+      width: 100%;
+      height: 60px;
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: 600;
+      background-color: #16269e;
+    }
+  }
+}

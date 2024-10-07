@@ -1,0 +1,15 @@
+@import "/src/styles/media/mixin";
+
+.login-logo-container {
+  width: 260px;
+
+  .logo-iamge {
+    width: 100%;
+  }
+}
+
+@include laptop {
+  .login-logo-container {
+    width: 200px;
+  }
+}

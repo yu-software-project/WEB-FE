@@ -1,0 +1,45 @@
+@import "/src/styles/media/mixin";
+
+.wait-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .wait-image {
+    margin-top: 40px;
+    width: 470px;
+    left: 500px;
+  }
+  .login-navigation {
+    width: 410px;
+    height: 53px;
+    margin-top: 30px;
+    line-height: 3;
+    font-size: 19px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #16269e;
+    border-style: none;
+    border-radius: 6px;
+  }
+}
+
+// laptop ( ~ 1919px)
+@include laptop {
+  .wait-container {
+    .wait-image {
+      margin-top: 60px;
+      width: 400px;
+      left: 500px;
+    }
+    .login-navigation {
+      width: 360px;
+      height: 57px;
+      margin-top: 35px;
+      line-height: 3;
+      font-size: 19px;
+      font-weight: 500;
+    }
+  }
+}
