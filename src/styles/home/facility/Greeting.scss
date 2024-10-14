@@ -1,0 +1,161 @@
+@import "/src/styles/media/mixin";
+
+//desktop (1920px ~ 1080px)
+
+.greeting-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  .greeting-content-container,
+  .history-content-container {
+    position: relative;
+    width: 100%;
+    left: 2.7%;
+  }
+  .greeting-content-container {
+    // 인사말 컨테이너
+    display: flex;
+    margin-top: 2%;
+    height: 30.67%;
+
+    .greeting-image-container {
+      // 인사말 이미지 컨테이너
+      width: 10.38%;
+      height: 56.63%;
+      img {
+        width: 83%;
+      }
+    }
+    .greeting-message-container {
+      // 인사말 입력 컨테이너
+      width: 89.62%;
+      height: 56.63%;
+      display: flex;
+      flex-direction: column;
+      .greeting-message-tooltip {
+        // 툴팁
+        position: absolute;
+        bottom: 100%;
+        font-size: 13px;
+        color: #898b9a;
+      }
+      .greeting-message-input {
+        // 인사말 입력칸
+        height: 100%;
+        padding-left: 5px;
+        border: 1px solid #dfe4ea;
+        border-radius: 8px;
+      }
+    }
+    
+  }
+  .greeting-submit-btn {
+    position: absolute;
+    right: 0;
+    bottom: 5%;
+    background-color: #16269e;
+    border-style: none;
+    border-radius: 5px;
+    padding: 0.6%;
+    color: white;
+    font-size: 17px;
+  }
+  .history-container {
+    position: absolute;
+    height: 69.33%;
+    width: 100%;
+    left: 2.7%;
+
+    .history-content-container {
+      width: 100%;
+      height: 80%;
+      overflow-y: auto;
+      left: 0;
+
+      &::-webkit-scrollbar {
+        width: 7px; // 스크롤바 너비
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 10px; // 스크롤바 트랙의 모서리 둥글게
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.3); // 스크롤바 색상
+        border-radius: 10px; // 스크롤바 모서리 둥글게
+      }
+      .one-decade {
+        margin-bottom: 5%;
+      }
+      select {
+        border-radius: 5px;
+        border-color: #dfe4ea;
+        width: 10%;
+        font-weight: bold;
+        //color: #898b9a;
+      }
+
+      button {
+        position: absolute;
+        border-style: none;
+        background-color: white;
+        right: 0;
+        font-weight: bold;
+      }
+
+      input {
+        position: relative;
+        border: 1px solid #dfe3ea;
+        border-radius: 5px;
+        width: 82%;
+        left: 2.5%;
+      }
+
+      .decade-container {
+        width: 100%;
+        border-bottom: 2px solid #dfe3ea;
+      }
+
+      .decade-option {
+        margin-bottom: 1%;
+      }
+      .year-container {
+        margin-top: 1%;
+      }
+      .year-add-btn {
+        margin-top: 1%;
+      }
+    }
+    .history-submit-btn {
+      position: absolute;
+      right: 0;
+      bottom: 5%;
+      background-color: #16269e;
+      border-style: none;
+      border-radius: 5px;
+      padding: 0.6%;
+      color: white;
+      font-size: 17px;
+    }
+  }
+}
+
+@include laptop {
+  .greeting-container {
+    .greeting-submit-btn {
+      font-size: 14px;
+      padding: 0.6%;
+    }
+    .history-container {
+      .history-content-container {
+        &::-webkit-scrollbar {
+          width: 5px; // 스크롤바 너비
+        }
+      }
+      .history-submit-btn {
+        font-size: 14px;
+        padding: 0.6%;
+      }
+    }
+  }
+}
