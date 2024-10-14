@@ -1,0 +1,69 @@
+@import "/src/styles/media/mixin";
+
+//desktop (1920px ~ 1080px)
+
+.scale-table-controll-container {
+  height: 63%;
+  max-height: 63%;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 7px; // 스크롤바 너비
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 10px; // 스크롤바 트랙의 모서리 둥글게
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); // 스크롤바 색상
+    border-radius: 10px; // 스크롤바 모서리 둥글게
+  }
+
+  .scale-tool-tip {
+    position: absolute;
+    top: -10%;
+    font-size: 12px;
+    color: #898b9a;
+  }
+
+  .table-container {
+    width: 100%;
+    height: 10%;
+
+    background-color: white;
+    border-collapse: collapse;
+
+    input {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 13px;
+      border-style: none;
+    }
+
+    ::placeholder {
+      color: #898b9a;
+    }
+
+    .first-row {
+      background-color: #f3f3f3;
+      input {
+        background-color: #f3f3f3;
+        font-weight: bold;
+      }
+    }
+    .table-row {
+      width: 100%;
+      .majar {
+        width: 43%;
+      }
+    }
+    .table-col {
+      border: 2px solid #dfe4ea;
+      height: 19px; // 미디어 쿼리 적용해야함
+    }
+  }
+}
+
+@include laptop {
+}

@@ -1,0 +1,120 @@
+@import "/src/styles/media/mixin";
+
+//desktop (1920px ~ 1080px)
+
+.facility-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  height: 80%;
+  left: 2%; // 중앙 위치
+  top: 3.5%;
+  background-color: rgb(255, 255, 255);
+
+  .facility-introduction-title {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    .image-container {
+      right: 31px;
+      position: relative;
+    }
+
+    .image-container img {
+      display: block;
+      width: 150px;
+      height: auto;
+    }
+
+    .title-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  .facilitay-navigation-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 17px;
+    font-weight: bold;
+    height: 6.5%;
+    border-bottom: 1px solid #94a3b9;
+
+    .navigation-btn {
+      width: 20%;
+      height: 100%;
+      text-align: center;
+      text-decoration: none;
+    }
+    .active {
+      border-bottom: 1px solid #000000;
+    }
+  }
+
+  .facility-detail-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 19px;
+    margin-bottom: 19px;
+    flex-grow: 1;
+
+    .facility-detail-name-container {
+      width: 26%;
+      border-right: 1px solid #94a3b9;
+
+      .content1,
+      .content2 {
+        position: relative;
+        margin-left: 7.5%;
+        font-size: 17px;
+        font-weight: bold;
+        width: 100%;
+      }
+      .content1 {
+        margin-top: 5.7%;
+        height: 30.67%;
+      }
+      .content2 {
+        height: 69.33%;
+      }
+    }
+    .greeting-container,
+    .introduction-container,
+    .route-info-container {
+      width: 70%;
+    }
+  }
+}
+
+@include laptop {
+  .facility-container {
+    .facility-introduction-title {
+      font-size: 17px;
+    }
+
+    .facilitay-navigation-container {
+      font-size: 16px;
+    }
+
+    .facility-detail-container {
+      .facility-detail-name-container {
+        .content1,
+        .content2 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
