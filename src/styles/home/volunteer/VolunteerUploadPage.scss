@@ -1,0 +1,347 @@
+@import "/src/styles/media/mixin";
+
+//desktop (1920px ~ 1080px)
+
+.volunteer-upload-page-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  // 제목
+  .volunteer-upload-page-title {
+    position: relative;
+    margin-left: 1.94%;
+    margin-top: 1.23%;
+    font-size: 17px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+
+    .image-container {
+      right: 41px;
+      position: relative;
+    }
+
+    .image-container img {
+      display: block;
+      width: 150px;
+      height: auto;
+    }
+
+    .title-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  // 상단 네비게이션 바
+  .navigation-bar-container {
+    position: relative;
+    margin-top: 1.4%;
+    height: 4.58%;
+    border-bottom: 1px solid #d6dce5;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    .navigation-bar {
+      position: relative;
+      text-align: center;
+      top: 5%;
+      font-size: 17;
+      width: 30%;
+    }
+
+    .active {
+      font-weight: 800;
+      border-bottom: 2px solid;
+    }
+  }
+
+  .volunteer-upload-detail-container {
+    position: relative;
+    width: 100%;
+    height: 82.39%;
+    display: flex;
+
+    .volunteer-upload-detail-name-container {
+      position: relative;
+      width: 22.19%;
+      height: 100%;
+      margin-left: 3.5%;
+      margin-top: 1%;
+      border-right: 1px solid #d6dce5;
+      font-size: 17px;
+      font-weight: 700;
+
+      .content1 {
+        position: relative;
+        padding-top: 7%;
+      }
+
+      .content2 {
+        position: relative;
+        top: 10%;
+      }
+
+      .content3 {
+        position: relative;
+        top: 68%;
+      }
+    }
+
+    .volunteer-info-container {
+      position: relative;
+      width: 77.81%;
+      height: 100%;
+      margin-top: 1%;
+      padding-left: 2%;
+
+      label {
+        // 안내 문구
+        font-size: 13px;
+        color: #898b9a;
+      }
+
+      .volunteer-title-input {
+        // 봉사 제목
+        position: relative;
+        margin-top: 1.3%;
+        height: 6.5%;
+        width: 80%;
+        border: 1px solid #d9d9d9;
+        border-radius: 6px;
+      }
+
+      .cycle-select-container {
+        position: relative;
+        margin-top: 4.2%;
+        margin-bottom: 2%;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          position: absolute;
+          left: -17.5%;
+        }
+
+        .cycle-select {
+          border: 1px solid #d9d9d9;
+          border-radius: 6px;
+          height: 100%;
+        }
+
+        align-items: center;
+        width: 80%;
+        height: 6.5%;
+      }
+
+      .cycle-date-select-container {
+        display: flex;
+        justify-content: space-between;
+        width: 35%;
+
+        .cycle-date-select-btn {
+          background-color: white;
+          border: 1px solid #d9d9d9;
+          border-radius: 6px;
+          width: 12%;
+          font-weight: 700;
+          cursor: pointer;
+
+          &.active {
+            background-color: #ffb800;
+            color: white;
+          }
+        }
+
+        height: 6.5%;
+        margin-bottom: 2%;
+      }
+
+      .volunteer-period-container,
+      .volunteer-time-container {
+        position: relative;
+        display: flex;
+        width: 80%;
+        align-items: center;
+        margin-top: 1.5%;
+
+        input {
+          border-style: none;
+          outline-style: none;
+          text-indent: 13px;
+        }
+
+        span {
+          position: absolute;
+          left: -17.5%;
+        }
+
+        button {
+          position: relative;
+          border-style: none;
+          width: 21px;
+          height: 21px;
+          top: 17%;
+          right: 5%;
+        }
+
+        .wave {
+          position: relative;
+          left: 8%;
+          top: 20%;
+          font-weight: 600;
+          margin-left: 2%;
+          margin-right: 2%;
+        }
+
+        .volunteer-start-date-container,
+        .volunteer-end-date-container,
+        .volunteer-start-time-container,
+        .volunteer-end-time-container {
+          position: relative;
+          background-color: white;
+
+          input {
+            position: relative;
+            text-indent: 0px;
+            height: 1%;
+          }
+        }
+      }
+    }
+
+    .is-time-select-container,
+    .only-adult-check-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-top: 1%;
+      margin-bottom: 4%;
+
+      button {
+        margin-top: 2.5px;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border: 1px solid #d9d9d9;
+        border-radius: 50%;
+        margin-right: 8px;
+        cursor: pointer;
+
+        &.active {
+          background-color: #ffb800;
+          border-color: #ffb800;
+        }
+      }
+    }
+
+    .volunteer-number-of-people-container {
+      position: relative;
+      display: flex;
+      justify-content: 70%;
+      height: 6.5%;
+      width: 30%;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1%;
+
+      .volunteer-min-people-input-container,
+      .volunteer-max-people-input-container {
+        border: 1px solid #d9d9d9;
+        border-radius: 6px;
+        height: 100%;
+        width: 44%;
+
+        input {
+          position: relative;
+          width: 80%;
+          height: 90%;
+          text-indent: 13px;
+          background-color: transparent;
+          border: none;
+        }
+      }
+    }
+
+    .volunteer-detail-nav-btn {
+      position: relative;
+      background-color: #ffb800;
+      font-size: 17px;
+      color: white;
+      left: 85%;
+      display: flex;
+      width: 8%;
+      bottom: 4%;
+      justify-content: center;
+
+      padding-top: 0.3%;
+      padding-bottom: 0.3%;
+      padding-left: 1.3%;
+      padding-right: 1.3%;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+  }
+
+  .volunteer-detail-info-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    span {
+      width: 95%;
+      top: 2%;
+      position: absolute;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .volunteer-detail-info-input {
+      position: relative;
+      width: 90%;
+      left: 5%;
+      height: 85%;
+      top: 6%;
+      border: 2px solid #dfe4ea;
+      border-radius: 6px;
+      text-indent: 8px;
+      resize: none;
+    }
+
+    button {
+      position: relative;
+      display: flex;
+      background-color: #ffb800;
+      color: white;
+      width: 7%;
+      height: 5%;
+      bottom: -95%;
+      right: 2%;
+      justify-content: center;
+      padding-top: 0.3%;
+      padding-bottom: 0.3%;
+      padding-left: 1.3%;
+      padding-right: 1.3%;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+}
+
+@include laptop {
+  .volunteer-upload-page-container {
+  }
+}

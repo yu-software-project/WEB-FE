@@ -1,0 +1,19 @@
+@import "/src/styles/media/mixin";
+
+//desktop (1920px ~ 1080px)
+
+.volunteer-container {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  height: 80%;
+  left: 2%; // 중앙 위치
+  top: 3.5%;
+}
+
+@include laptop {
+  .volunteer-container {
+  }
+}
