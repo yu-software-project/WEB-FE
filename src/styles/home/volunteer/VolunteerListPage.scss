@@ -1,0 +1,271 @@
+@import "/src/styles/media/mixin";
+
+//desktop (1920px ~ 1080px)
+
+.volunteer-list-page-container {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  width: 96%;
+  left: 2%;
+  top: 3%;
+  height: 94%;
+
+  .volunteer-list-title-container {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    .image-container {
+      right: 40px;
+      position: relative;
+    }
+
+    .image-container img {
+      display: block;
+      width: 150px;
+      height: auto;
+    }
+
+    .title-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  .volunteer-list-search-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    width: 87.4%;
+    left: 6%;
+    height: 18%;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+    .search-option {
+      font-size: 17px;
+      font-weight: 600;
+      width: 13.68%;
+    }
+
+    .volunteer-list-search-word-container,
+    .volunteer-list-search-period-container,
+    .volunteer-list-search-recruit-state-container {
+      display: flex;
+      position: relative;
+
+      height: 28%;
+    }
+
+    .volunteer-list-search-word-container {
+      input {
+        border: 1px solid;
+        border-color: #d9d9d9;
+        border-radius: 6px;
+        width: 44.2%;
+        margin-right: 4.58%;
+        text-indent: 13px;
+      }
+      button {
+        border-radius: 6px;
+        width: 10.7%;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .volunteer-list-search-btn {
+        background-color: #ffb800;
+        color: white;
+        border-style: none;
+        margin-right: 0.67%;
+      }
+      .volunteer-list-search-reset {
+        background-color: #f3f3f3;
+        border: 1px solid;
+        border-color: #d9d9d9;
+      }
+    }
+
+    .volunteer-list-search-period-container {
+      input {
+        border-style: none;
+        outline-style: none;
+        text-indent: 13px;
+      }
+
+      button {
+        position: relative;
+        border-style: none;
+        width: 21px;
+        height: 21px;
+        top: 17%;
+        right: 5%;
+      }
+      img {
+        width: 100%;
+      }
+
+      .wave {
+        position: relative;
+        top: 20%;
+        font-weight: 600;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+
+      .volunteer-list-search-start-date-container,
+      .volunteer-list-search-end-date-container {
+        background-color: white;
+        border: 1px solid;
+        border-radius: 6px;
+        border-color: #d9d9d9;
+      }
+    }
+
+    .volunteer-list-search-recruit-state-container {
+      button {
+        margin-top: 2.5px;
+        width: 22px;
+        height: 22px;
+        background-color: white;
+        border-style: solid;
+        border-radius: 50%;
+        border-width: 1px;
+        border-color: #898c9a;
+        margin-right: 8px;
+      }
+
+      .recruited-state,
+      .recruiting-state {
+        margin-top: 4px;
+        font-size: 15px;
+        margin-right: 20px;
+      }
+
+      .recruiting-state-btn.active {
+        // 버튼 클릭
+        background-color: #ffb800;
+        border-color: #ffb800;
+        .check1 {
+          stroke: white;
+        }
+      }
+      .recruited-state-btn.active {
+        background-color: #ffb800;
+        border-color: #ffb800;
+        .check2 {
+          stroke: white;
+        }
+      }
+    }
+  }
+
+  .volunteer-list-container {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5%;
+    width: 87.4%;
+    left: 6%;
+    height: 65%;
+    justify-content: space-between;
+
+    table {
+      width: 100%;
+      height: 90%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      border: 2px solid #d3d8de;
+      //justify-content: space-between;
+    }
+    th,
+    td {
+      border-bottom: 1px solid #d3d8de;
+    }
+
+    thead {
+      height: 10%;
+      background-color: #f3f3f3;
+    }
+
+    .volunteer-title, // 마우스 올리면 포인터
+    .volunteer-period {
+      cursor: pointer;
+    }
+
+    .navigation-btn {
+      background-color: #f3f3f3;
+      border: #d3d8de solid 1px;
+      border-radius: 10px;
+      width: 80px;
+      height: 30px;
+      color: #898c9a;
+      font-weight: 800;
+    }
+
+    .volunteer-title:hover, // 마우스 올리면 밑줄
+    .volunteer-period:hover {
+      text-decoration: underline;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+      width: 7%;
+      text-align: center;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 40%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 20%;
+      text-align: center;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+      width: 10%;
+      text-align: center;
+    }
+
+    th:nth-child(5),
+    td:nth-child(5) {
+      width: 10%;
+      text-align: center;
+    }
+
+    th:nth-child(6),
+    td:nth-child(6) {
+      width: 10%;
+      text-align: center;
+    }
+
+    .page-navigation-container ul {
+      padding: 0;
+      display: flex;
+      list-style-type: none;
+      justify-content: center;
+    }
+    .page-navigation-container li {
+      margin: 0 5px;
+    }
+    .page-navigation-container a {
+      text-decoration: none;
+    }
+  }
+}
+
+@include laptop {
+  .volunteer-list-page-container {
+  }
+}
