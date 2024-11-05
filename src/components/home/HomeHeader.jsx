@@ -35,9 +35,8 @@ const HomeHeader = () => {
           </Link>
           {activeMenu === "notice" && (
             <div className="dropdown-menu">
-              <Link to="/notice/list">공고 목록</Link>
-              <Link to="/notice/register">공고 등록</Link>
-              <Link to="/notice/manage">지원자 관리</Link>
+              <Link to="./volunteer/list">공고 목록</Link>
+              <Link to="./volunteer/upload">공고 등록</Link>
             </div>
           )}
         </div>
