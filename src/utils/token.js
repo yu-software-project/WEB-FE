@@ -29,6 +29,14 @@ const getRefreshToken = () => {
 };
 
 /**
+ * refreshToken 반환
+ * @returns {string} refreshToken
+ */
+const removeRefreshToken = () => {
+  return Cookies.remove("refreshToken");
+};
+
+/**
  * 토큰이 없는 경우 로그인 페이지로 이동시키기 위한 Loader
  * @returns 로그인페이지로 이동
  */
@@ -43,6 +51,7 @@ const restrictAccessWithNoToken = async () => {
 export {
   getAuthToken,
   getRefreshToken,
+  removeRefreshToken,
   setRefreshToken,
   restrictAccessWithNoToken,
 };

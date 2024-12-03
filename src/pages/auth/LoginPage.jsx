@@ -35,7 +35,8 @@ export const action = async ({ request }) => {
 
     setAccessToken(accessToken);
     setRefreshToken(refreshToken, expiredTime);
-
+    console.log(data.get("isManager"));
+    if (data.get("isManager")) return redirect("/manager");
     return redirect("/home");
   }
 };

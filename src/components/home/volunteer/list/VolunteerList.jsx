@@ -15,97 +15,8 @@ const VolunteerList = ({ searchKeyword }) => {
     };
     const response = await getVolunteerListBySearch(tmp);
     const data = response;
-    const data2 = {
-      recruitments: [
-        {
-          id: 1,
-          name: "Basic Yoga Class",
-          recruitmentStartDate: "2024-11-01",
-          recruitmentEndDate: "2024-11-07",
-          startTime: {
-            hour: 9,
-            minute: 0,
-            second: 0,
-            nano: 0,
-          },
-          endTime: {
-            hour: 10,
-            minute: 30,
-            second: 0,
-            nano: 0,
-          },
-          startDate: "2024-11-10",
-          endDate: "2024-12-31",
-          repeatedDays: {
-            sunday: false,
-            monday: true,
-            tuesday: false,
-            wednesday: true,
-            thursday: false,
-            friday: true,
-            saturday: false,
-          },
-          view: 125,
-          totalApplicants: 30,
-          currentApplicants: 10,
-          detailInfo:
-            "A yoga class for beginners, held every Monday, Wednesday, and Friday.",
-          recruitmentWaitings: [
-            {
-              id: 1,
-              recruitmentDates: ["2024-11-10", "2024-11-12"],
-            },
-          ],
-          timeExits: true,
-          repeatedDate: true,
-        },
-        {
-          id: 2,
-          name: "Advanced Coding Bootcamp",
-          recruitmentStartDate: "2024-11-05",
-          recruitmentEndDate: "2024-12-01",
-          startTime: {
-            hour: 18,
-            minute: 0,
-            second: 0,
-            nano: 0,
-          },
-          endTime: {
-            hour: 20,
-            minute: 0,
-            second: 0,
-            nano: 0,
-          },
-          startDate: "2024-12-05",
-          endDate: "2025-01-15",
-          repeatedDays: {
-            sunday: false,
-            monday: true,
-            tuesday: true,
-            wednesday: true,
-            thursday: true,
-            friday: true,
-            saturday: false,
-          },
-          view: 300,
-          totalApplicants: 100,
-          currentApplicants: 75,
-          detailInfo:
-            "An intensive bootcamp for advanced coding skills, held on weekdays.",
-          recruitmentWaitings: [
-            {
-              id: 2,
-              recruitmentDates: ["2024-12-05", "2024-12-06", "2024-12-07"],
-            },
-          ],
-          timeExits: true,
-          repeatedDate: true,
-        },
-      ],
-      totalElements: 2,
-      totalPages: 1,
-    };
-    const formattedData = data2.recruitments.map((item) => ({
+
+    const formattedData = data.recruitments.map((item) => ({
       id: item.id,
       title: item.name,
       period: `${item.recruitmentStartDate} ~ ${item.recruitmentEndDate}`,
@@ -115,7 +26,7 @@ const VolunteerList = ({ searchKeyword }) => {
     }));
 
     setBoardData(formattedData);
-    setTotalItemsCount(data2.totalElements);
+    setTotalItemsCount(data.totalElements);
   };
 
   useEffect(() => {
@@ -134,12 +45,12 @@ const VolunteerList = ({ searchKeyword }) => {
     });
   };
 
-  const routeToRecruitStatePage = (id) => {
-    navigate(`/home/volunteer/view/manage?id=${id}`);
+  const routeToRecruitStatePage = (item) => {
+    navigate(`/home/volunteer/view/manage?id=${item.id}`);
   };
 
-  const navigateManagePage = (id) => {
-    navigate(`/home/volunteer/view/manage?id=${id}`);
+  const navigateManagePage = (item) => {
+    navigate(`/home/volunteer/view/manage?id=${item.id}`);
   };
 
   return (

@@ -48,7 +48,6 @@ const FacilityScaleTable = ({ floorSizeList }) => {
       displayIndex: index, // displayIndex 추가
     }));
     const res = await requestFacilityScaleUpdate(facilityScaleDto);
-    console.log(res);
     if (res.status === 200) alert("변경사항이 성공적으로 저장되었습니다.");
     else alert("오류 발생");
   };

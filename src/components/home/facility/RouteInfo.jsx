@@ -5,14 +5,12 @@ import "styles/home/facility/RouteInfo.scss";
 const RouteInfo = ({ routeInfoLoaderData, addressInfo }) => {
   const [routeInfo, setRouteInfo] = useState(routeInfoLoaderData);
   //const addressInfo = ["경상북도 경산시 하양읍 하양로", "101동 123123호"];
-  console.log(routeInfo);
 
   const updateRouteInfo = async () => {
     const routeInfoDto = {
       memo: routeInfo,
     };
     const res = await updateRouteInfoAPI(routeInfoDto);
-    console.log(res);
   };
 
   return (

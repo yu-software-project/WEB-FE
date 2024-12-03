@@ -1,12 +1,19 @@
 import logo from "assets/logo.png";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { removeRefreshToken } from "utils/token";
 const HomeHeader = () => {
   const [activeMenu, setActiveMenu] = useState(null); // state to track which menu is active
 
   const handleMenuToggle = (menuName) => {
     setActiveMenu(activeMenu === menuName ? null : menuName);
+  };
+  const navigate = useNavigate();
+  const logoutHandler = () => {
+    console.log("로그아웃");
+    removeRefreshToken();
+
+    navigate("/");
   };
 
   return (
@@ -42,7 +49,9 @@ const HomeHeader = () => {
         </div>
       </div>
       <div className="profile-container">
-        <button className="logout-btn">로그아웃</button>
+        <button className="logout-btn" onClick={logoutHandler}>
+          로그아웃
+        </button>
       </div>
     </div>
   );

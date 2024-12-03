@@ -35,32 +35,44 @@
     color: #94a3b9;
   }
 
-  .save-login-info-container {
-    // 로그인 정보 저장 container
-    margin-top: 20px;
-    display: inline-block;
-    .save-login-info-btn {
-      // 버튼
-      width: 22px;
-      height: 22px;
+  /* 전체 컨테이너 스타일 */
+  .manager-login-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+  }
 
-      border-style: solid;
-      border-radius: 50%;
-      border-width: 2px;
-      border-color: #898c9a;
+  /* label 내의 요소 스타일 */
+  .toggle-button-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
-      background-color: rgb(255, 255, 255);
-      position: relative;
-    }
-    .save-login-info-btn.active {
-      // 버튼 클릭
-      background-color: #2fcaae;
-    }
-    .save-login-info {
-      margin-left: 10px;
-      font-size: 25px;
-      color: #94a3b9;
-    }
+  /* 체크박스 숨기기 */
+  .toggle-button-input {
+    display: none;
+  }
+
+  /* SVG 기본 스타일 */
+  svg {
+    transition: transform 0.3s ease;
+    background-color: white;
+    border: 1px solid #94a3b9;
+    border-radius: 50px;
+  }
+
+  /* 체크된 상태일 때 SVG 변화 */
+  .checked {
+    fill: #4caf50; /* 활성화 색상 */
+    transform: scale(1.2); /* 체크된 상태에서 SVG 크기 커지기 */
+  }
+
+  /* 텍스트 스타일 */
+  span {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
   }
 
   .login-btn {

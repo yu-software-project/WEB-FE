@@ -1,13 +1,13 @@
-import HomeHeader from "components/home/HomeHeader";
+import ManagerHeader from "components/manager/ManagerHeaer";
 import { Outlet, redirect } from "react-router-dom";
-import "styles/home/HomeLayout.scss";
+import "styles/manager/ManagerLayout.scss";
 import { restrictAccessWithNoToken } from "utils/token";
-const HomeLayout = () => {
+const ManagerLayout = () => {
   return (
-    <div className="homepage-container">
-      <div className="homepage-body-container">
+    <div className="managerpage-container">
+      <div className="managerpage-body-container">
         <div className="content-container">
-          <HomeHeader />
+          <ManagerHeader />
           <Outlet />
         </div>
       </div>
@@ -15,7 +15,7 @@ const HomeLayout = () => {
   );
 };
 
-export default HomeLayout;
+export default ManagerLayout;
 
 export const loader = async () => {
   const isToken = await restrictAccessWithNoToken();

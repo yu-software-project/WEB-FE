@@ -5,6 +5,8 @@ import "styles/auth/login/LoginForm.scss";
 const LoginForm = ({ myEmail }) => {
   const [email, setEmail] = useState(myEmail || "");
   const [password, setPassword] = useState("");
+  const [isManager, setIsManager] = useState(false);
+  console.log(isManager);
 
   return (
     <Form method="post">
@@ -33,6 +35,28 @@ const LoginForm = ({ myEmail }) => {
                 setPassword(e.target.value);
               }}
             />
+          </div>
+          <div className="manager-login-container">
+            <label className="toggle-button-label">
+              <input
+                type="checkbox"
+                name="isManager"
+                value={isManager}
+                checked={isManager}
+                onChange={() => setIsManager(!isManager)}
+                className="toggle-button-input"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                className={isManager ? "checked" : ""}
+              >
+                <path d="M9 19l-7-7 1.41-1.41L9 16.17l11.29-11.29 1.41 1.41z" />
+              </svg>
+              <span>관리자용 로그인</span>
+            </label>
           </div>
         </div>
         <button type="submit" className="login-btn">

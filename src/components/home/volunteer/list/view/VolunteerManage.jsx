@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import {
   approveVolunteer,
   deleteVolunteer,
+  getVolunteerDetail,
   getVolunteerPeopleList,
   rejectVolunteer,
 } from "services/home/volunteer";
@@ -12,7 +13,7 @@ const VolunteerManage = () => {
   const [days, setDays] = useState("2024-06-01");
   const [waitingVolunteers, setWaitingVolunteers] = useState([]);
   const [acceptedVolunteers, setAcceptedVolunteers] = useState([]);
-
+  console.log(waitingVolunteers);
   const [people, setPeople] = useState({
     name: "이름",
     gender: "성별",
@@ -27,9 +28,9 @@ const VolunteerManage = () => {
 
     const fetchVolunteerManageInfo = async (id) => {
       try {
+        console.log(id);
         const data = {
           recruitmentId: id,
-          localDate: days,
         };
         const response = await getVolunteerPeopleList(data);
         if (
@@ -49,7 +50,21 @@ const VolunteerManage = () => {
       fetchVolunteerManageInfo(id);
     }
   }, [days, location.search]);
-
+  const handleVolunteerClick = async (volunteerId) => {
+    try {
+      const response = await getVolunteerDetail(volunteerId); // API 호출
+      console.log(response);
+      setPeople({
+        name: response.name || "이름",
+        gender: response.gender || "성별",
+        birthdate: response.birthDate || "생일",
+        phone: response.phoneNum || "번호",
+        intro: response.selfIntroduction || "소개",
+      }); // 받은 데이터를 people에 적용
+    } catch (error) {
+      console.error("Error fetching volunteer detail:", error);
+    }
+  };
   const handleApprove = async (volunteer) => {
     const searchParams = new URLSearchParams(location.search);
     const id = searchParams.get("id");
@@ -156,7 +171,7 @@ const VolunteerManage = () => {
           <div className="approve-waiting-list-container">
             {waitingVolunteers.map((volunteer, index) => (
               <div key={volunteer.id} className="volunteer-item">
-                <span>
+                <span onClick={() => handleVolunteerClick(volunteer.id)}>
                   {index + 1}. {volunteer.name}
                 </span>
                 <button

@@ -1,0 +1,176 @@
+.manager-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.2);
+  //display: flex;
+  //flex-direction: column;
+
+  .manager-page-title {
+    position: relative;
+    top: 30px;
+    right: 5px;
+    margin-left: 1.94%;
+    margin-top: 1.23%;
+    font-size: 17px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+
+    .image-container {
+      right: 41px;
+      position: relative;
+    }
+
+    .image-container img {
+      display: block;
+      width: 150px;
+      height: auto;
+    }
+
+    .title-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+  .facility-container {
+    position: relative;
+    top: 100px;
+    width: 80%;
+    height: 70%;
+    left: 10%;
+    gap: 10%;
+    display: flex;
+    flex-direction: row;
+
+    .facility-detail-container,
+    .approve-facility-container {
+      flex: 1;
+      //background-color: red;
+    }
+
+    .facility-detail-container {
+      //background-color: #16269e;
+      font-size: 14px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      overflow: hidden;
+      .detail-form {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+
+        // 각 필드 행을 스타일링
+        > div {
+          display: flex;
+          align-items: center;
+          margin-bottom: 12px; // 각 행 간격 조정
+        }
+
+        label {
+          width: 120px; // 라벨의 너비를 고정하여 정렬
+          font-weight: bold;
+          color: #333;
+          text-align: right; // 라벨 텍스트 오른쪽 정렬
+          margin-right: 10px;
+        }
+
+        span {
+          flex: 1; // span 태그가 나머지 공간을 차지하도록 설정
+          padding: 8px 12px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          background-color: #fff;
+          overflow: auto;
+        }
+
+        // 한줄 소개 (multi-line text) 스타일링
+        div:last-child span {
+          height: 100px; // 높이 조정
+          padding: 12px;
+          overflow-y: auto;
+        }
+      }
+    }
+    .title {
+      position: relative;
+      font-weight: 800;
+      font-size: 18px;
+      top: -45px;
+      left: -10px;
+    }
+    .approve-facility-container {
+      width: 100%;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      .list-container {
+        padding: 20px;
+        .facility-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 0;
+          border-bottom: 1px solid #e3e8ec;
+
+          span {
+            flex: 1;
+          }
+
+          button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &.approve-btn {
+              background-color: #c9e2ff;
+              color: #16269e;
+            }
+
+            &.reject-btn {
+              background-color: #ffe6dc;
+              color: #ed6653;
+            }
+
+            &.delete-btn {
+              background-color: #ffe6dc;
+              color: #ed6653;
+            }
+          }
+        }
+      }
+    }
+    .delete-button {
+      padding: 3px 6px;
+      right: 0;
+      background-color: #ff4d4f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .delete-button:hover {
+      background-color: #ff0000;
+    }
+  }
+}

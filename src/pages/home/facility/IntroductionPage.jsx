@@ -16,12 +16,5 @@ export default IntroductionPage;
 
 export const loader = async () => {
   const data = await requestFacilityData();
-
-  console.log(data);
-  //return data;
-
-  return {
-    floorSizeList: [],
-    floorPictureClusterList: [],
-  };
+  return data;
 };

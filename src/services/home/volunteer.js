@@ -83,6 +83,7 @@ const getVolunteerListBySearch = async (data) => {
 };
 
 const approveVolunteer = async (data) => {
+  console.log(data);
   const res = await volunteerAPIInterface(
     "post",
     "api/web/recruitment/accept",
@@ -109,6 +110,16 @@ const deleteVolunteer = async (data) => {
   return res;
 };
 
+const getVolunteerDetail = async (user_id) => {
+  console.log(user_id);
+  const res = await volunteerAPIInterface(
+    "get",
+    `api/web/recruitment/detail/user/info/${user_id}`,
+    null
+  );
+  return res;
+};
+
 // const updateFacilityHistory = async (data) => {
 //   const res = await volunteerAPIInterface("post", "api/history/update", data);
 //   return res;
@@ -123,4 +134,5 @@ export {
   approveVolunteer,
   rejectVolunteer,
   deleteVolunteer,
+  getVolunteerDetail,
 };
